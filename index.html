@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AtualizaPRO - Criação, atualização e modernização de sites profissionais para empresas e negócios locais.">
+    <title>AtualizaPRO — Sites Profissionais para seu Negócio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SVG Filter for Glass Effect -->
+    <svg style="display: none;">
+        <filter id="glass-distortion">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- HEADER -->
+    <header class="header glass-nav" id="header">
+        <div class="glass-filter"></div>
+        <div class="glass-overlay"></div>
+        <div class="glass-specular"></div>
+        <div class="container header-inner glass-content">
+            <a href="#" class="logo">
+                <span class="logo-icon">A</span>
+                <span class="logo-text">Atualiza<span class="logo-accent">PRO</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#planos" class="nav-link">Planos</a>
+                <a href="#portfolio" class="nav-link">Portfólio</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-switcher" id="themeSwitcher">
+                    <button class="theme-btn" data-theme="light" aria-label="Modo claro">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                    <button class="theme-btn" data-theme="dark" aria-label="Modo escuro">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
+                <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20AtualizaPRO." class="btn btn-primary header-cta" target="_blank" rel="noopener">Falar no WhatsApp</a>
+            </div>
+            <div class="mobile-header-actions">
+                <div class="theme-switcher mobile-theme-switcher" id="mobileThemeSwitcher">
+                    <button class="theme-btn" data-theme="light" aria-label="Modo claro">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                    <button class="theme-btn" data-theme="dark" aria-label="Modo escuro">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
+                <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20AtualizaPRO." class="mobile-whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <nav class="mobile-nav-links">
+            <a href="#servicos" class="mobile-nav-link">Serviços</a>
+            <a href="#planos" class="mobile-nav-link">Planos</a>
+            <a href="#portfolio" class="mobile-nav-link">Portfólio</a>
+            <a href="#faq" class="mobile-nav-link">FAQ</a>
+            <a href="#contato" class="mobile-nav-link">Contato</a>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge animate-in">
+                    <span class="badge-dot"></span>
+                    Criação e modernização de sites
+                </div>
+                <h1 class="hero-title animate-in">
+                    Seu negócio merece uma presença digital <span class="text-gradient">profissional</span>.
+                </h1>
+                <p class="hero-subtitle animate-in">
+                    Criamos, atualizamos e modernizamos sites para empresas e negócios que querem transmitir mais confiança na internet.
+                </p>
+                <div class="hero-buttons animate-in">
+                    <a href="#planos" class="btn btn-primary btn-lg">Quero criar meu site</a>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20AtualizaPRO." class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+                <p class="hero-trust animate-in">
+                    Sites profissionais &bull; Design responsivo &bull; Otimizados para Google
+                </p>
+            </div>
+            <div class="hero-image animate-in">
+                <img src="imagens/workwebdesignr.jpg" alt="Criação de sites profissionais">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="section problem" id="problema">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Problema</span>
+                <h2 class="section-title">Seu site está ajudando ou <span class="text-gradient">afastando</span> clientes?</h2>
+                <p class="section-desc">A primeira impressão do cliente muitas vezes acontece na internet. Um site desatualizado, lento ou profissional pode estar fazendo seu negócio perder oportunidades todos os dias.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card animate-in">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    </div>
+                    <h3>Site antigo</h3>
+                    <p>Um site com visual desatualizado transmite descaso e faz o cliente desconfiar da qualidade do seu serviço.</p>
+                </div>
+                <div class="problem-card animate-in">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <h3>Não funciona no celular</h3>
+                    <p>A maioria das pessoas acessa a internet pelo celular. Se seu site não funciona bem nele, você está perdendo clientes.</p>
+                </div>
+                <div class="problem-card animate-in">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </div>
+                    <h3>Sem presença online</h3>
+                    <p>Depender apenas do Instagram e WhatsApp limita seu alcance e não transmite a credibilidade que um site profissional oferece.</p>
+                </div>
+                <div class="problem-card animate-in">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <h3>Não transmite confiança</h3>
+                    <p>Um site mal feito ou genérico faz o cliente questionar se sua empresa é realmente profissional e confiável.</p>
+                </div>
+                <div class="problem-card animate-in">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    </div>
+                    <h3>Site lento</h3>
+                    <p>Um site que demora para carregar faz o visitante sair antes mesmo de ver o que você oferece.</p>
+                </div>
+                <div class="problem-card animate-in">
+                    <div class="problem-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <h3>Sem formulário ou contato</h3>
+                    <p>Se o cliente não consegue facilmente entrar em contato, ele vai para a concorrência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUÇÃO -->
+    <section class="section solution" id="servicos">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Solução</span>
+                <h2 class="section-title">Transforme sua <span class="text-gradient">presença digital</span>.</h2>
+                <p class="section-desc">Oferecemos soluções completas para criar ou modernizar a presença online do seu negócio.</p>
+            </div>
+            <div class="solution-grid">
+                <div class="solution-card animate-in">
+                    <div class="solution-card-glow"></div>
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <h3>Criação de sites profissionais</h3>
+                    <p>Sites modernos, responsivos e preparados para gerar confiança e facilitar o contato com seus clientes.</p>
+                </div>
+                <div class="solution-card animate-in">
+                    <div class="solution-card-glow"></div>
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    </div>
+                    <h3>Modernização de sites</h3>
+                    <p>Transformamos sites antigos e desatualizados em páginas modernas, rápidas e com design profissional.</p>
+                </div>
+                <div class="solution-card animate-in">
+                    <div class="solution-card-glow"></div>
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    </div>
+                    <h3>Landing pages</h3>
+                    <p>Páginas focadas em conversão, ideais para campanhas, lançamentos e captação de leads.</p>
+                </div>
+                <div class="solution-card animate-in">
+                    <div class="solution-card-glow"></div>
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h3>Sites para empresas e comércios</h3>
+                    <p>Soluções feitas sob medida para o seu tipo de negócio, seja loja, escritório, clínica ou restaurante.</p>
+                </div>
+                <div class="solution-card animate-in">
+                    <div class="solution-card-glow"></div>
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </div>
+                    <h3>SEO otimizado</h3>
+                    <p>Estrutura preparada para aparecer nos resultados de busca do Google e ser encontrado por mais clientes.</p>
+                </div>
+                <div class="solution-card animate-in">
+                    <div class="solution-card-glow"></div>
+                    <div class="solution-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h3>Integração com WhatsApp</h3>
+                    <p>Botão de WhatsApp integrado para que seus clientes entrem em contato de forma rápida e prática.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section how-it-works">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Processo</span>
+                <h2 class="section-title">Como <span class="text-gradient">funciona</span>?</h2>
+                <p class="section-desc">Um processo simples e direto para você ter uma presença digital profissional.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card animate-in">
+                    <div class="step-number">01</div>
+                    <h3>Você explica o que precisa</h3>
+                    <p>Entre em contato e conte sobre seu negócio, objetivo e o que você espera do seu site.</p>
+                </div>
+                <div class="step-connector animate-in"></div>
+                <div class="step-card animate-in">
+                    <div class="step-number">02</div>
+                    <h3>Analisamos seu negócio</h3>
+                    <p>Estudamos seu público, concorrência e objetivos para criar a melhor estratégia para seu site.</p>
+                </div>
+                <div class="step-connector animate-in"></div>
+                <div class="step-card animate-in">
+                    <div class="step-number">03</div>
+                    <h3>Criamos ou modernizamos</h3>
+                    <p>Desenvolvemos um site profissional, moderno e responsivo, alinhado com a identidade do seu negócio.</p>
+                </div>
+                <div class="step-connector animate-in"></div>
+                <div class="step-card animate-in">
+                    <div class="step-number">04</div>
+                    <h3>Sua presença digital está pronta</h3>
+                    <p>Você recebe um site pronto para transmitir confiança e facilitar o contato com seus clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="section plans" id="planos">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Planos</span>
+                <h2 class="section-title">Escolha a melhor <span class="text-gradient">solução</span> para você</h2>
+                <p class="section-desc">Temos opções para diferentes necessidades e objetivos. Encontre a que faz mais sentido para o seu negócio.</p>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card animate-in">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Solução personalizada</h3>
+                        <div class="plan-price">Sob consulta</div>
+                        <p class="plan-desc">Para empresas que precisam de um site desenvolvido de acordo com suas necessidades específicas.</p>
+                    </div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20personalizado%20para%20meu%20site." class="btn btn-outline plan-btn" target="_blank" rel="noopener">Solicitar orçamento</a>
+                </div>
+                <div class="plan-card plan-card-highlight animate-in">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Conversar sobre meu projeto</h3>
+                        <div class="plan-price">Vamos entender seu projeto</div>
+                        <p class="plan-desc">Preencha algumas informações sobre sua empresa e conte o que você precisa. Nossa equipe analisará seu projeto e entrará em contato.</p>
+                    </div>
+                    <a href="#formulario" class="btn btn-primary plan-btn">Preencher formulário</a>
+                </div>
+                <div class="plan-card animate-in">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Pro Max Site</h3>
+                        <div class="plan-price"><span class="plan-currency">R$</span> 997</div>
+                        <p class="plan-desc">Opção para quem tem comércio de grande porte.</p>
+                    </div>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20plano%20Pro%20Max%20Site%20por%20R%24%20997." class="btn btn-outline plan-btn" target="_blank" rel="noopener">Quero comprar meu site</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IA -->
+    <section class="section ai-section">
+        <div class="container">
+            <div class="ai-content animate-in">
+                <div class="ai-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2v2a4 4 0 0 0 8 0v-2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"></path><circle cx="9" cy="10" r="1" fill="currentColor"></circle><circle cx="15" cy="10" r="1" fill="currentColor"></circle></svg>
+                </div>
+                <span class="section-tag">Tecnologia</span>
+                <h2 class="section-title">Tecnologia para criar sites <span class="text-gradient">melhores</span>.</h2>
+                <p class="ai-text">Utilizamos ferramentas modernas de inteligência artificial para acelerar etapas de planejamento, conteúdo, estrutura e desenvolvimento. O resultado não é um site genérico criado automaticamente: cada projeto é pensado de acordo com o negócio, público e objetivo do cliente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section differentials">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Diferenciais</span>
+                <h2 class="section-title">Por que escolher o <span class="text-gradient">AtualizaPRO</span>?</h2>
+            </div>
+            <div class="diff-grid">
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                    </div>
+                    <h4>Design profissional</h4>
+                    <p>Layout moderno, elegante e alinhado com a identidade do seu negócio.</p>
+                </div>
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                    </div>
+                    <h4>Responsivo para celular</h4>
+                    <p>Funciona perfeitamente em qualquer dispositivo, do desktop ao smartphone.</p>
+                </div>
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <h4>Otimizado para Google</h4>
+                    <p>Estrutura preparada para aparecer nas buscas e ser encontrado por clientes.</p>
+                </div>
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h4>Integração com WhatsApp</h4>
+                    <p>Botão de contato direto para facilitar a comunicação com seus clientes.</p>
+                </div>
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h4>Carregamento rápido</h4>
+                    <p>Sites otimizados para carregar rápido e não perder visitantes.</p>
+                </div>
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </div>
+                    <h4>Experiência do usuário</h4>
+                    <p>Navegação intuitiva que guia o visitante até o contato ou compra.</p>
+                </div>
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    </div>
+                    <h4>Conteúdo estratégico</h4>
+                    <p>Textos pensados para comunicar seu valor e converter visitantes em clientes.</p>
+                </div>
+                <div class="diff-card animate-in">
+                    <div class="diff-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2v2a4 4 0 0 0 8 0v-2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"></path></svg>
+                    </div>
+                    <h4>Uso inteligente de IA</h4>
+                    <p>Tecnologia de ponta para acelerar processos e entregar resultados melhores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Portfólio</span>
+                <h2 class="section-title">Projetos <span class="text-gradient">demonstrativos</span></h2>
+                <p class="section-desc">Conheça exemplos do tipo de trabalho que realizamos. Em breve, novos projetos reais serão adicionados aqui.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card animate-in">
+                    <div class="portfolio-mockup">
+                        <div class="mockup-browser">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-content mockup-1">
+                                <div class="mockup-nav-bar"></div>
+                                <div class="mockup-hero-bar"></div>
+                                <div class="mockup-text-lines">
+                                    <div class="mockup-line long"></div>
+                                    <div class="mockup-line medium"></div>
+                                    <div class="mockup-line short"></div>
+                                </div>
+                                <div class="mockup-cards-row">
+                                    <div class="mockup-mini-card"></div>
+                                    <div class="mockup-mini-card"></div>
+                                    <div class="mockup-mini-card"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mockup-phone">
+                            <div class="mockup-phone-notch"></div>
+                            <div class="mockup-phone-content mockup-1">
+                                <div class="mockup-nav-bar"></div>
+                                <div class="mockup-hero-bar"></div>
+                                <div class="mockup-text-lines">
+                                    <div class="mockup-line long"></div>
+                                    <div class="mockup-line medium"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Clínica São Lucas</h3>
+                        <p>Site institucional para clínica médica</p>
+                        <span class="portfolio-tag">Demonstração</span>
+                    </div>
+                </div>
+                <div class="portfolio-card animate-in">
+                    <div class="portfolio-mockup">
+                        <div class="mockup-browser">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-content mockup-2">
+                                <div class="mockup-nav-bar"></div>
+                                <div class="mockup-hero-bar wide"></div>
+                                <div class="mockup-grid-2">
+                                    <div class="mockup-mini-card tall"></div>
+                                    <div class="mockup-mini-card tall"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mockup-phone">
+                            <div class="mockup-phone-notch"></div>
+                            <div class="mockup-phone-content mockup-2">
+                                <div class="mockup-nav-bar"></div>
+                                <div class="mockup-hero-bar"></div>
+                                <div class="mockup-mini-card"></div>
+                                <div class="mockup-mini-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>AutoPeça Central</h3>
+                        <p>E-commerce para autopeças</p>
+                        <span class="portfolio-tag">Demonstração</span>
+                    </div>
+                </div>
+                <div class="portfolio-card animate-in">
+                    <div class="portfolio-mockup">
+                        <div class="mockup-browser">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="mockup-content mockup-3">
+                                <div class="mockup-nav-bar"></div>
+                                <div class="mockup-hero-bar medium"></div>
+                                <div class="mockup-text-lines">
+                                    <div class="mockup-line long"></div>
+                                    <div class="mockup-line short"></div>
+                                </div>
+                                <div class="mockup-btn-row">
+                                    <div class="mockup-btn"></div>
+                                    <div class="mockup-btn outline"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mockup-phone">
+                            <div class="mockup-phone-notch"></div>
+                            <div class="mockup-phone-content mockup-3">
+                                <div class="mockup-nav-bar"></div>
+                                <div class="mockup-hero-bar"></div>
+                                <div class="mockup-text-lines">
+                                    <div class="mockup-line long"></div>
+                                    <div class="mockup-line short"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Advocacia Mendes</h3>
+                        <p>Landing page para escritório de advocacia</p>
+                        <span class="portfolio-tag">Demonstração</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Dúvidas</span>
+                <h2 class="section-title">Perguntas <span class="text-gradient">frequentes</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Vocês criam sites do zero?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Criamos sites completos do zero, desde a escolha do layout até a publicação final. Cada projeto é desenvolvido de acordo com o perfil do negócio e os objetivos do cliente.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Vocês atualizam sites existentes?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Modernizamos sites antigos, lentos ou desatualizados, transformando-os em páginas modernas, responsivas e com design profissional.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Meu negócio precisa realmente de um site?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Um site profissional transmite credibilidade e permite que clientes encontrem você pela internet. Mesmo que você já tenha redes sociais, um site próprio é o endereço certo do seu negócio no mundo digital.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>O site funciona no celular?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Todos os nossos sites são responsivos, ou seja, se adaptam perfeitamente a celulares, tablets e computadores.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>O site pode ter botão de WhatsApp?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Integramos botões de WhatsApp para que seus clientes possam entrar em contato de forma rápida e prática, direto do site.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Vocês ajudam com textos e imagens?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Podemos ajudar com criação de textos estratégicos e orientação sobre imagens adequadas para o seu projeto.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Vocês fazem SEO?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Nossos sites são estruturados com boas práticas de SEO para ajudar a ser encontrado nos resultados de busca do Google.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Quanto custa criar um site?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O valor depende do tipo de plano e solução que você escolher para o seu projeto. Entre em contato para receber um orçamento personalizado.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Posso solicitar um orçamento?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Claro. Você pode entrar em contato pelo WhatsApp ou preencher nosso formulário para receber um orçamento personalizado.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Vocês atendem empresas de qualquer cidade?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Como nosso trabalho é 100% digital, atendemos empresas de qualquer cidade ou estado do Brasil.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Meus dados estão protegidos?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Prezamos pela segurança e privacidade dos seus dados. Em conformidade com a Lei Geral de Proteção de Dados (LGPD), nunca fornecemos ou compartilhamos suas informações com terceiros sem o seu consentimento.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-in">
+                    <button class="faq-question">
+                        <span>Quanto tempo fica pronto?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O prazo de entrega varia entre 3 a 7 dias úteis, dependendo do tipo de projeto e das necessidades do seu negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="section contact-form-section" id="formulario">
+        <div class="container">
+            <div class="section-header animate-in">
+                <span class="section-tag">Contato</span>
+                <h2 class="section-title">Conte o que você <span class="text-gradient">precisa</span></h2>
+                <p class="section-desc">Preencha as informações abaixo e entraremos em contato para entender melhor seu projeto.</p>
+            </div>
+            <form class="contact-form animate-in" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="business">Nome do negócio</label>
+                        <input type="text" id="business" name="business" placeholder="Ex: Loja do João">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">O que você precisa?</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="criacao">Criar um site do zero</option>
+                        <option value="modernizacao">Modernizar site existente</option>
+                        <option value="landing-page">Landing page</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Conte mais sobre seu projeto</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Descreva seu negócio, objetivo e qualquer informação relevante..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-full">Enviar mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section cta-final" id="contato">
+        <div class="cta-glow"></div>
+        <div class="container cta-content animate-in">
+            <h2 class="section-title">Pronto para melhorar a presença digital do seu <span class="text-gradient">negócio</span>?</h2>
+            <p class="section-desc">Conte o que você precisa e descubra qual solução faz mais sentido para sua empresa.</p>
+            <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20melhorar%20a%20presen%C3%A7a%20digital%20do%20meu%20neg%C3%B3cio." class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Falar com o AtualizaPRO
+            </a>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">A</span>
+                        <span class="logo-text">Atualiza<span class="logo-accent">PRO</span></span>
+                    </a>
+                    <p class="footer-tagline">Criação, atualização e modernização de sites.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/5500000000000" class="footer-social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="https://instagram.com/" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="mailto:contato@atualizapro.com.br" class="footer-social-link" aria-label="E-mail">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <a href="#">Início</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#planos">Planos</a>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AtualizaPRO. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20AtualizaPRO." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg class="whats-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="whats-text">Fale conosco</span>
+    </a>
+
+    <!-- MOBILE WHATSAPP BAR -->
+    <div class="mobile-whatsapp-bar">
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20do%20AtualizaPRO." target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Fale conosco
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
