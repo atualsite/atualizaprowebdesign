@@ -156,8 +156,8 @@ img {
     position: absolute;
     inset: 0;
     border-radius: 12px;
-    padding: 0.5px;
-    background: linear-gradient(135deg, var(--purple-primary), #48c78e);
+    padding: 1px;
+    background: radial-gradient(circle at 50% 50%, rgba(126, 22, 245, 0.9) 0%, rgba(126, 22, 245, 0.5) 30%, rgba(9, 22, 125, 0.15) 70%, rgba(9, 22, 125, 0.05) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -271,8 +271,8 @@ img {
     position: absolute;
     inset: 0;
     border-radius: 50px;
-    padding: 0.8px;
-    background: radial-gradient(circle, rgba(9, 22, 125, 0.43) 0%, rgba(126, 22, 245, 0.43) 100%);
+    padding: 1px;
+    background: radial-gradient(circle at 50% 50%, rgba(126, 22, 245, 0.9) 0%, rgba(126, 22, 245, 0.5) 30%, rgba(9, 22, 125, 0.15) 70%, rgba(9, 22, 125, 0.05) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -344,8 +344,8 @@ img {
     position: absolute;
     inset: 0;
     border-radius: 50px;
-    padding: 0.8px;
-    background: radial-gradient(circle, rgba(9, 22, 125, 0.43) 0%, rgba(126, 22, 245, 0.43) 100%);
+    padding: 1px;
+    background: radial-gradient(circle at 50% 50%, rgba(126, 22, 245, 0.9) 0%, rgba(126, 22, 245, 0.5) 30%, rgba(9, 22, 125, 0.15) 70%, rgba(9, 22, 125, 0.05) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -526,8 +526,8 @@ img {
     position: absolute;
     inset: 0;
     border-radius: 22px;
-    padding: 0.8px;
-    background: radial-gradient(circle, rgba(9, 22, 125, 0.43) 0%, rgba(126, 22, 245, 0.43) 100%);
+    padding: 1px;
+    background: radial-gradient(circle at 50% 50%, rgba(126, 22, 245, 0.9) 0%, rgba(126, 22, 245, 0.5) 30%, rgba(9, 22, 125, 0.15) 70%, rgba(9, 22, 125, 0.05) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -781,7 +781,7 @@ img {
 .plan-card {
     padding: 36px;
     border-radius: 24px;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     background: var(--bg-glass);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
@@ -793,16 +793,7 @@ img {
 }
 
 .plan-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 24px;
-    padding: 0.8px;
-    background: radial-gradient(circle, rgba(9, 22, 125, 0.43) 0%, rgba(126, 22, 245, 0.43) 100%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+    display: none;
 }
 
 .plan-card::after {
@@ -820,18 +811,19 @@ img {
 
 .plan-card:hover {
     transform: translateY(-8px);
+    border-color: #4929b4;
     box-shadow:
-        0 8px 40px rgba(72, 199, 142, 0.1),
-        0 4px 24px rgba(0, 0, 0, 0.3);
+        0 8px 22px rgba(126, 22, 245, 0.15),
+        0 4px 13px rgba(0, 0, 0, 0.3);
 }
 
 .plan-card:hover::after {
     opacity: 1;
-    background: radial-gradient(circle, rgba(72, 199, 142, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(126, 22, 245, 0.08) 0%, transparent 70%);
 }
 
 .plan-card-highlight {
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     background: var(--bg-glass);
 }
 
@@ -840,9 +832,10 @@ img {
 }
 
 .plan-card-highlight:hover {
+    border-color: #4929b4;
     box-shadow:
-        0 12px 56px rgba(72, 199, 142, 0.1),
-        0 4px 24px rgba(0, 0, 0, 0.3),
+        0 12px 31px rgba(126, 22, 245, 0.15),
+        0 4px 13px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(168, 85, 247, 0.25);
 }
 
